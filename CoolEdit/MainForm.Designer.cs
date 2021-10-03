@@ -82,7 +82,7 @@ namespace CoolEdit
             // 
             this.openFileToolStripMenuItem.Name = "openFileToolStripMenuItem";
             this.openFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.openFileToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.openFileToolStripMenuItem.Text = "&Open file";
             this.openFileToolStripMenuItem.Click += new System.EventHandler(this.openFileToolStripMenuItem_Click);
             // 
@@ -90,7 +90,7 @@ namespace CoolEdit
             // 
             this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
             this.saveFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.saveFileToolStripMenuItem.Text = "&Save file";
             this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.saveFileToolStripMenuItem_Click);
             // 
@@ -98,20 +98,20 @@ namespace CoolEdit
             // 
             this.closeFileToolStripMenuItem.Name = "closeFileToolStripMenuItem";
             this.closeFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
-            this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.closeFileToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.closeFileToolStripMenuItem.Text = "&Close file";
             this.closeFileToolStripMenuItem.Click += new System.EventHandler(this.closeFileToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(267, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(252, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(255, 34);
             this.exitToolStripMenuItem.Text = "&Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -130,7 +130,7 @@ namespace CoolEdit
             // 
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.cutToolStripMenuItem.Text = "&Cut";
             this.cutToolStripMenuItem.Click += new System.EventHandler(this.cutToolStripMenuItem_Click);
             // 
@@ -138,7 +138,7 @@ namespace CoolEdit
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.copyToolStripMenuItem.Text = "C&opy";
             this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
             // 
@@ -146,7 +146,7 @@ namespace CoolEdit
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.pasteToolStripMenuItem.Text = "&Paste";
             this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
@@ -157,7 +157,7 @@ namespace CoolEdit
             this.lowercaseToolStripMenuItem,
             this.insertDateToolStripMenuItem});
             this.stringOperationsToolStripMenuItem.Name = "stringOperationsToolStripMenuItem";
-            this.stringOperationsToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.stringOperationsToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.stringOperationsToolStripMenuItem.Text = "&String operations";
             // 
             // uppercaseToolStripMenuItem
@@ -198,8 +198,9 @@ namespace CoolEdit
             // aboutCooleditToolStripMenuItem
             // 
             this.aboutCooleditToolStripMenuItem.Name = "aboutCooleditToolStripMenuItem";
-            this.aboutCooleditToolStripMenuItem.Size = new System.Drawing.Size(253, 34);
+            this.aboutCooleditToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.aboutCooleditToolStripMenuItem.Text = "&About Cooledit ...";
+            this.aboutCooleditToolStripMenuItem.Click += new System.EventHandler(this.aboutCooleditToolStripMenuItem_Click);
             // 
             // txtContent
             // 

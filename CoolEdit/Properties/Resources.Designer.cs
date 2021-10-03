@@ -63,6 +63,16 @@ namespace CoolEdit.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bokehlicia_Captiva_Accessories_text_editor {
+            get {
+                object obj = ResourceManager.GetObject("Bokehlicia-Captiva-Accessories-text-editor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CoolEdit_splashscreen {
             get {
                 object obj = ResourceManager.GetObject("CoolEdit-splashscreen", resourceCulture);

@@ -75,8 +75,9 @@ namespace CoolEdit
 
         private void OpenFile()
         {
-            //opens the filedialog and returns how the user closed the dialog.
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (IsDirty && MessageBox.Show("Do you want to open a new file without saving your current changes?", "You may lose unsaved changes", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK) { return; }
+                //opens the filedialog and returns how the user closed the dialog.
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog1.FileName;
                 //If the user clicked OK
@@ -84,6 +85,7 @@ namespace CoolEdit
                 {
                     txtContent.Text = File.ReadAllText(filePath);
                     IsDirty = false;
+                    saveFileDialog1.FileName = openFileDialog1.FileName;
                 }
                 catch (Exception ex)
                 {
@@ -110,6 +112,7 @@ namespace CoolEdit
                     try
                     {
                         File.WriteAllText(filePath, txtContent.Text);
+                        IsDirty = false;
                     }
                     catch (Exception ex)
                     {
@@ -122,7 +125,11 @@ namespace CoolEdit
         }
         private void CloseFile()
         {
-
+            if (IsDirty && MessageBox.Show("Do you want to close the file without saving your changes?", "You may lose unsaved changes", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                txtContent.Text = "";
+                IsDirty = false;
+            }
         }
         private void Exit()
         {
@@ -168,10 +175,14 @@ namespace CoolEdit
         }
         private void About()
         {
-
+            new AboutForm().ShowDialog();
         }
 
         #endregion
 
+        private void aboutCooleditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About();
+        }
     }
 }
