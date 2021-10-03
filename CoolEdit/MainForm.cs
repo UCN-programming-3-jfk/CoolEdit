@@ -7,6 +7,7 @@ namespace CoolEdit
     public partial class MainForm : Form
     {
         public bool IsDirty { get; set; }
+       
         public MainForm()
         {
             InitializeComponent();
@@ -69,13 +70,18 @@ namespace CoolEdit
             IsDirty = true;
         }
 
+        private void aboutCooleditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About();
+        }
         #endregion
 
-        #region Functionality
+        #region Functionality   
 
         private void OpenFile()
         {
-            if (IsDirty && MessageBox.Show("Do you want to open a new file without saving your current changes?", "You may lose unsaved changes", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK) { return; }
+            if (IsDirty && MessageBox.Show("Do you want to open a new file without saving your current changes?",
+                "You may lose unsaved changes", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) != DialogResult.OK) { return; }
                 //opens the filedialog and returns how the user closed the dialog.
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
@@ -93,8 +99,8 @@ namespace CoolEdit
                         $"Error was '{ex.Message}'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
         }
+
         private void SaveFile()
         {
             //opens the filedialog and returns how the user closed the dialog.
@@ -121,8 +127,8 @@ namespace CoolEdit
                     }
                 }
             }
-
         }
+
         private void CloseFile()
         {
             if (IsDirty && MessageBox.Show("Do you want to close the file without saving your changes?", "You may lose unsaved changes", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
@@ -133,7 +139,7 @@ namespace CoolEdit
         }
         private void Exit()
         {
-            if (IsDirty && MessageBox.Show("Do you want to exit without saving changes?", "You may lose unsaved changes", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+            if (!IsDirty || (IsDirty && MessageBox.Show("Do you want to exit without saving changes?", "You may lose unsaved changes", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK))
             {
                 Application.Exit();
             }
@@ -177,12 +183,6 @@ namespace CoolEdit
         {
             new AboutForm().ShowDialog();
         }
-
         #endregion
-
-        private void aboutCooleditToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            About();
-        }
     }
 }
