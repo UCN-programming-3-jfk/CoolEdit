@@ -61,9 +61,9 @@ namespace CoolEdit
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(262, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(247, 120);
+            this.label2.Size = new System.Drawing.Size(228, 120);
             this.label2.TabIndex = 1;
-            this.label2.Text = "A sample text editor\r\ncreated in .NET Core 5.0\r\n\r\n\r\n";
+            this.label2.Text = "A sample text editor\r\ncreated using .NET 6.0\r\n\r\n\r\n";
             // 
             // AboutForm
             // 
